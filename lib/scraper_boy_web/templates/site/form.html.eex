@@ -1,0 +1,37 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Valami hiba történt. A pontos leírást a hibás bevileti mezőnél láthatod.</p>
+    </div>
+  <% end %>
+
+  <div class="nes-field">
+    <%= label f, :Cím, class: "control-label" %>
+    <%= text_input f, :title, class: "nes-input" %>
+    <%= error_tag f, :title %>
+  </div>
+  <div class="nes-field">
+    <%= label f, :Szerző, class: "control-label" %>
+    <%= text_input f, :authors, class: "nes-input" %>
+    <%= error_tag f, :authors %>
+  </div>
+  <div class="nes-field">
+    <%= label f, :Dátum, class: "control-label" %>
+    <%= text_input f, :published_at, class: "nes-input" %>
+    <%= error_tag f, :published_at %>
+  </div>
+  <div class="nes-field">
+    <%= label f, :Kategória, class: "control-label" %>
+    <%= text_input f, :category, class: "nes-input" %>
+    <%= error_tag f, :category %>
+  </div>
+  <div class="nes-field">
+    <%= label f, :Szöveg, class: "control-label" %>
+    <%= text_input f, :content, class: "nes-input" %>
+    <%= error_tag f, :content %>
+  </div>
+
+  <div class="nes-field">
+    <%= submit "Mentés", class: "nes-btn is-success" %>
+  </div>
+<% end %>

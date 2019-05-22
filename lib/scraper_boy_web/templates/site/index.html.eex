@@ -1,0 +1,9 @@
+<ul class="sites nes-list is-circle">
+  <%= for site <- @sites do %>
+    <li>
+    <a href="/sites/<%= site.id %>">
+      <%= site.name %>
+    </a>
+    </li>
+  <% end %>
+</ul>

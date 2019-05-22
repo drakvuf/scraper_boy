@@ -1,0 +1,64 @@
+/* This file is for your main application css. */
+
+body, code, html, kbd, pre, samp {
+  font-family: "Press Start 2P";
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+header {
+  height: 100px;
+  background: #132054;
+  line-height: 100px;
+}
+
+header a {
+  color: white;
+  font-size: 30px;
+}
+
+header a:hover {
+  color: white;
+  text-decoration: none;
+}
+
+a {
+  color: #264BE5;
+}
+
+a:hover {
+  color: #132054;
+  text-decoration: none;
+}
+
+h2 {
+  margin: 35px 0;
+  font-size: 32px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.inline {
+  display: flex;
+  justify-content: space-between;
+}
+
+.inline > div {
+  width: 48%;
+}
+
+/* NES OVERRIDE*/
+
+.nes-btn {
+  margin: 25px 0;
+}
+
+.nes-container.with-title > .title {
+  margin: -2.4rem 0 1rem;
+}

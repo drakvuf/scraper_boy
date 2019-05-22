@@ -1,0 +1,42 @@
+<h2><%= @site.name %></h2>
+<div class="inline">
+  <div class="nes-container with-title selector-form">
+    <h3 class="title">Szerkesztés</h3>
+    <%= render "form.html", Map.put(assigns, :action, Routes.site_path(@conn, :update, @site)) %>
+    <div class="item progress">
+      <p class="nes-text">Pontszám: <span>0</span>/5</p>
+      <progress class="nes-progress" value="0" max="5"></progress>
+    </div>
+  </div>
+  <div class="nes-container with-title">
+    <h3 class="title">Teszt</h3>
+    <form class="test-form">
+      <div class="nes-field">
+        <label class="control-label">Cikk url</label>
+        <input type="text" class="nes-input" name="url" required>
+      </div>
+      <p class="nes-text is-error error"></p>
+      <button type="submit" class="nes-btn is-primary">Teszt</button>
+    </form>
+    <div class="nes-field">
+      <label class="control-label">Cím</label>
+      <p class="nes-input result title"></p>
+    </div>
+    <div class="nes-field">
+      <label class="control-label">Szerző</label>
+      <p class="nes-input result author"></p>
+    </div>
+    <div class="nes-field">
+      <label class="control-label">Dátum</label>
+      <p class="nes-input result published-at"></p>
+    </div>
+    <div class="nes-field">
+      <label class="control-label">Kategória</label>
+      <p class="nes-input result category"></p>
+    </div>
+    <div class="nes-field">
+      <label class="control-label">Szöveg</label>
+      <p class="nes-input result content"></p>
+    </div>
+  </div>
+</div>
